@@ -7,5 +7,5 @@ So, as victory is neigh, the candidate becomes more anxious about the <b>viabili
 
 He charges you with a study of <b>how many parks</b> would he have to <b>build</b> in order to keep up the promise in campaign. 
 
-
-  
+So, your task will be to gather the data of <b>how many neighbourhoods in Toronto do not have a park right now</b>.
+And make a proposal, <b>where to build new parks first</b>.
