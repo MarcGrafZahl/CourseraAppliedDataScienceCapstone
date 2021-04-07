@@ -42,6 +42,7 @@ This is important to identify the parks to be build in a first step, in order to
 We yield the following results.
 
 1. As first result, we find out, that of the 103 neighbourhoods, the number of nearby parks is the following:
+
 |\#Neighbourhoods|\#Parks|
 |:-------------:|:----:|
 |56|0|
@@ -72,8 +73,14 @@ The chosen ones are the following neighbourhoods.
 
 ## Discussion
 
+Maybe the limitation of the use of Foursquare gives us not all the data. One could think to find other sources to determine if there are more parks than in Foursquare. But it gives a good approximation.
 
+Actually, I was really surprised there were so many neighbourhoods without parks.
+
+The K-Means-Algorithm in itself did not show any surprises, the distribution of the identified neighbourhoods was quite intuitive.
+
+The Folium-Map-library was really helpful to visualize the problem and the results.
 
 ## Conclusion
 
-
+The data science methods, libraries and python abilities learned during this formation cycle were really helpful to tackle this problem. But maybe the limitation to the Foursquare web service covered up different ways for the data cimpilation.
