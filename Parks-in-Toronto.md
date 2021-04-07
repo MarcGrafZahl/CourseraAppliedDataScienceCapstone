@@ -33,7 +33,7 @@ This is important to identify the parks to be build in a first step, in order to
 ## Methodology
 
 1. The criterion used to define "A park nearby" is the same as used during the course when the Toronto neighbourhoods where examined: It is that the distance of a park to the neighbourhood coordinates shall not be more than 500 meters in the Foursquare query.
-2. The way to create the neighbourhood-parks dataframe is just the joining of the Neighbouthodd- and the park-counting-dataframe.
+2. The way to create the neighbourhood-parks dataframe is just the joining of the Neighbouthood- and the park-counting-dataframe.
 3. For chosing the five neighbourhoods where the first new parks are to be projected, a K-Means-Algorithm with 5 clusters is used. The distance function is just the distance between the coordinates. This seems to me to be the adequate approach to have a geographical clustering in 5 areas.
 4. Within the clusters, to chose the neighbourhood for the new park, the initial idea was to just take the nearest neighbourhood to the cluster centers, but looking at the map, there sometimes were green areas (which in Foursquare are not marked as parks), so the choice was changed to a neighbourhood farer away from green areas.
 
