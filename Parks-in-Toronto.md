@@ -30,11 +30,18 @@ From this data, a dataframe will be formed with the neighbourhoods and the numbe
 As <b>map</b>, we will use folium to visualize the distribution of the neighbourhoods wwithout parks. 
 This is important to identify the parks to be build in a first step, in order to not build them all in one spot.
 
-## Methotology
+## Methodology
+
+1. The criterion used to define "A park nearby" is the same as used during the course when the Toronto neighbourhoods where examined: It is that the distance of a park to the neighbourhood coordinates shall not be more than 500 meters in the Foursquare query.
+2. The way to create the neighbourhood-parks dataframe is just the joining of the Neighbouthodd- and the park-counting-dataframe.
+3. For chosing the five neighbourhoods where the first new parks are to be projected, a K-Means-Algorithm with 5 clusters is used. The distance function is just the distance between the coordinates. This seems to me to be the adequate approach to have a geographical clustering in 5 areas.
+4. Within the clusters, to chose the neighbourhood for the new park, the initial idea was to just take the nearest neighbourhood to the cluster centers, but looking at the map, there sometimes were green areas (which in Foursquare are not marked as parks), so the choice was changed to a neighbourhood farer away from green areas.
 
 ## Results
 
-As first result, we find out, that of the 103 neighbourhods, the number of nearby parks is the following:
+We yield the following results.
+
+1. As first result, we find out, that of the 103 neighbourhoods, the number of nearby parks is the following:
 |\#Neighbourhoods|\#Parks|
 |:-------------:|:----:|
 |56|0|
@@ -42,8 +49,30 @@ As first result, we find out, that of the 103 neighbourhods, the number of nearb
 |14|2|
 |1|3|
 
+1. The nearby-parks (at least the from Foursquare) are actually more in the center than outside.
+![image](https://user-images.githubusercontent.com/62191134/113913868-250b5b80-97dd-11eb-8450-eb8aa26fa198.png)
+<br>The circles represent the neighbourhood centers, the color-code is as follows:
+<br>Dark green: Neighbourhood with 3 parks
+<br>Light green: Neighbourhoods with 2 parks
+<br>Orange: Neighbourhoods with 1 park
+<br>Red: Neighbourhoods without parks
+
+1. Clustering the neighbourhoods in 5 areas with the k-Means-Algorithm we see a quite expected distribution of the neighbourhoods.
+![image](https://user-images.githubusercontent.com/62191134/113914625-09ed1b80-97de-11eb-8ccd-7d8c0113267c.png)
+The big points are the cluster-centers. 
+
+1. The choice of the 5 neighbourhoods where to start the construction of the parks is done by looking at the map. It should not be neighbourhoods near national parks etc.
+![image](https://user-images.githubusercontent.com/62191134/113915081-9e577e00-97de-11eb-9e16-b23f6c588c31.png)
+The chosen ones are the following neighbourhoods.
+<li>Brockton, Parkdale Village, Exhibition Place
+<li>Alderwood, Long Branch
+<li>Bedford Park, Lawrence Manor East
+<li>Guildwood, Morningside, West Hill
+<li>Wexford, Maryvale
 
 ## Discussion
+
+
 
 ## Conclusion
 
